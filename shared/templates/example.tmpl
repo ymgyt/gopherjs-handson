@@ -1,0 +1,82 @@
+{{ define "pagecontent" }}
+<h1> Hello from Gopherjs</h1>
+
+<div class="example">
+	<form class="pure-form">
+	<fieldset class="pure-group">
+		<h2>Example: Change An Element's CSS Style Property</h2>
+	</fieldset>
+	<fieldset class="pure-group">
+		<div id="igRacer">
+			<img id="isomorphicGopher" border="0" src="/static/images/isomorphic_go_logo.png">
+		</div>
+	</fieldset>
+	<fieldset class="pure-group">
+		<button id="showGopher" type="button" class="pure-button pure-button-primary">Show Isomorphic Gopher</button>
+		<button id="hideGopher" type="button" class="pure-button pure-button-primary">Hide Isomorphic Gopher</button>
+	</fieldset>
+	</form>
+</div>
+
+<div class="example">
+    <form class="pure-form">
+        <input id="messageInput" type="text" value="Hello Gopher !">
+        <button id="alertMessageButton" type="button">Display Alert</button>
+    </form>
+</div>
+
+<div class="example">
+    <form class="pure-form">
+        <fieldset><h3>XHR Post</h3></fieldset>
+        <fieldset>
+            <label for="textToLowercase">Enter text</label>
+            <input id="textToLowercase", type="text" placehodler="Enter some text" value="GopherJS">
+        </fieldset>
+        <fieldset>
+            <button id="lowercaseTransformButton" type="button">Send it</button>
+        </fieldset>
+    </form>
+</div>
+
+<div class="example">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Point</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+</div>
+
+<div class="example">
+    <h3>Local Storage</h3>
+    <div id="lsContainer">
+        <form>
+            <fieldset style="min-height: 272px">
+                <div id="storageContents">
+                    <dl id="lsItemList"></dl>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <label for="lsMessageInput">Key: </label>
+                <input id="lsItemKey" type="text" value="">
+
+                <label for="lsMessageInput">Value: </label>
+                <input id="lsItemValue" type="text" value="">
+            </fieldset>
+
+            <fieldset>
+                <button id="lsSaveButton" type="button">Save</button>
+                <button id="lsClearAllButton" type="button">Clear All</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+{{ end }}
+{{ template "layouts/layout" . }}
